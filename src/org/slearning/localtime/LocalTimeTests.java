@@ -7,12 +7,13 @@ import java.time.ZoneOffset;
 
 import org.junit.jupiter.api.Test;
 
+
 class LocalTimeTests {
 
 	@Test
-	void test() {
+	void testTime() {
 		assertEquals(true, new LocalTimeLearning().getCurrTime().
-				toInstant(ZoneOffset.of("GMT")).toEpochMilli()
+				toInstant(ZoneOffset.UTC).toEpochMilli()
 				>0);
 		
 	}
