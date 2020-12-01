@@ -11,6 +11,29 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
+	<developers>
+		<developer>
+			<id>karianna</id>
+			<name>Ven</name>
+			<organization>Hegde</organization>
+			<organizationUrl>http://www.ven.org</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>+5</timezone>
+		</developer>
+	</developers>
+
+	<!-- Contributors -->
+	<contributors>
+		<contributor>
+			<name>Cae Fernandes</name>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>-3</timezone>
+		</contributor>
+	</contributors>
 	<groupId>org.ven</groupId>
 	<artifactId>javaintricacies</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -25,6 +48,7 @@
 		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
 
 	</properties>
+
 
 	<dependencies>
 		<dependency>
@@ -92,47 +116,20 @@
 		</plugins>
 	</build>
 
+	<reporting>
+		<plugins>
 
-	<!-- 配置全局的属性 -->
-    <properties>
-        <java.version>1.8</java.version>
-        <mybatis.version>2.1.0</mybatis.version>
-        <mysql.version>5.1.47</mysql.version>
-    </properties>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.1.0</version>
 
-	<!-- 配置依赖关系 -->
-    <dependencies>
-        <!-- web启动器 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!-- mybatis启动器 -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis.version}</version>
-        </dependency>
-        <!-- mysql驱动 -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <!-- lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-    </dependencies>
- 
-	<build>
-        <plugins>
-            <!-- 配置SpringBoot的maven插件 -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+				<configuration>
+					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</reporting>
 
 </project>
