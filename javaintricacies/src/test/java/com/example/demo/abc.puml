@@ -1,6 +1,10 @@
 @startuml
 !pragma graphviz_dot jdot
+header Hello World
+footer  Hello World
+title This is awesome
 
+note "This is a floating note" as N1
 class Dummy {
   String data
   void methods()
@@ -16,3 +20,9 @@ Object <|-- ArrayList
 
 @enduml
 
+@startuml
+
+Bob->Alice: Hello()
+note left of Bob: Hello'\
+
+@enduml
