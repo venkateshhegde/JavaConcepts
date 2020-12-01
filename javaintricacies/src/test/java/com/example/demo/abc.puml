@@ -1,0 +1,18 @@
+@startuml
+!pragma graphviz_dot jdot
+
+class Dummy {
+  String data
+  void methods()
+}
+
+class Flight {
+   flightNumber : Integer
+   departureTime : Date
+}
+
+Object <|-- ArrayList
+
+
+@enduml
+
